@@ -1,0 +1,24 @@
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    $browser: '-webkit-'; @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    $browser: '-moz-'; @content;
+  }
+  @-o-keyframes #{$animationName} {
+    $browser: '-o-'; @content;
+  }
+  @keyframes #{$animationName} {
+    $browser: ''; @content;
+  }
+} $browser: null;
+
+
+@mixin prefix($property, $value) {
+  $vendors: webkit moz ms o;
+  @each $vendor in $vendors {
+    #{"-" + $vendor + "-" + $property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}

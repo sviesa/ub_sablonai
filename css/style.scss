@@ -1,0 +1,66 @@
+@import 'mixins';
+
+body{
+	font-size: 28pt;
+	font-family: arial;
+}
+
+div.buttons{
+	font-size: 24pt;
+	padding: 0 20px;
+	width: 350px;
+	/*float: left;*/
+	display: table-cell;
+}
+div.text{
+	border: 2px solid #5888b1;
+	width: 700px;
+	/*float: left;*/
+	display: table-cell;
+	padding: 20px;
+}
+div.title{
+	text-align: center;
+	font-weight: bold;
+}
+div.textblock{cursor: url(../img/pencil.png), auto;}
+.button-container{
+	padding: 10px;
+}
+.button{
+	margin-top: 10px;
+	text-align: center;
+	border: 5px solid rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	padding: 10px;
+	@include prefix(border-radius, 20%);
+	&.selected{
+		@include prefix(animation, blink 1s infinite);
+	}
+}
+
+.check, .cancel{
+	float: left;
+	// font-size: 20pt;
+	background-color: #c7c7c7;
+	border: 1px solid #9d9d9d;
+	cursor: pointer;
+	padding: 5px 15px;
+	margin: 25px;
+}
+
+#color1{ background-color: #7dadd5 }
+#color2{ background-color: #83c86e }
+#color3{ background-color: #fefc70 }
+#color4{ background-color: #eea0c4 }
+#color5{ background-color: #ffbf42 }
+#color6{ background-color: #b5ab98 }
+#color7{ background-color: #f43535 }
+
+
+@include keyframes('blink') {
+  50% {
+  	border: 5px solid rgba(0, 0, 0, 0);
+  	opacity: 0.5;
+  }
+}

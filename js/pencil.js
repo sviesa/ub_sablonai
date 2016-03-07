@@ -1,13 +1,13 @@
 var global_color = '';
 var global_id = 0;
 var answers = {
-    "color1" : "Jūratė ir Motiejus kartu su mama ir tėčiu",
-    "color2" : "Jie nori pamatyti Baltijos jūrą",
-    "color3" : "žiemą.",
-    "color4" : "jūros krantas pasidengia ledu ir sniegu,",
-    "color5" : "pamatyti jūroje laivą, iš kurio mojuoja kapitonas ir jūreiviai,",
-    "color6" : "Laivu galima nuplaukti iki Suomijos - Kalėdų senelio gimtinės...",
-    "color7" : "apledijusį jūros krantą. Jūros pakrantėje spindėjo didžiuliai ledo kalnai.",
+    "color1" : [0, [0,7]],
+    "color2" : [0, [12, 16]],
+    "color3" : [0, [17,17]],
+    "color4" : [1, [13,18]],
+    "color5" : [2, [4,12]],
+    "color6" : [3, [1,9]],
+    "color7" : [4, [9,17]]
     }
 var leftButtonDown = false;
 $(document).mousedown(function(e){
@@ -39,18 +39,29 @@ $(document).ready( function(){
 
 })
 
-function check(){
-    var selected_text = '';
-    $.each( $('span.selected'+global_id), function(index, value){
-        selected_text = selected_text + $(value).text();
-    } );
+// function check(){
+//     var selected_text = '';
+//     $.each( $('span.selected'+global_id), function(index, value){
+//         selected_text = selected_text + $(value).text();
+//     } );
 
-    // console.log( answers[id].replace(/ /g, '') );
-    // console.log( selected_text.replace(/ /g, '') );
-    if (answers[global_id].replace(/ /g, '') === $.trim(selected_text.replace(/ /g, '')) ){
-        alert('Teisingai');
+//     // console.log( answers[id].replace(/ /g, '') );
+//     // console.log( selected_text.replace(/ /g, '') );
+//     if (answers[global_id].replace(/ /g, '') === $.trim(selected_text.replace(/ /g, '')) ){
+//         alert('Teisingai');
+//     }
+//     else{ alert('Neteisingai');}
+// }
+function check(){
+    var arr = answers[global_id];
+    var selector = '';
+    for ( var i = arr[1][0]; i <= arr[1][1]; i++ ) {
+        selector = selector
+            +' #'+arr[0].toString()+i.toString()+'word,'
+            +' #'+arr[0].toString()+i.toString()+'whitespace,';
     }
-    else{ alert('Neteisingai');}
+    console.log( "4px dotted "+global_color );
+    $(selector.slice(0,-1)).css("box-shadow", "0 7px 0 0"+global_color);
 }
 function cancel(){
     $.each( $('span.selected'+global_id), function(index, value){

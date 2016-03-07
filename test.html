@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>jQuery UI Sortable - Connect lists</title>
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <style>
+  #sortable1, #sortable2, #sortable3 {
+    border: 1px solid #eee;
+    width: 142px;
+    min-height: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 5px 0 0 0;
+    float: left;
+    margin-right: 10px;
+  }
+  #sortable1 li, #sortable2 li, #sortable3 li {
+    background: red;
+    float: left;
+    margin: 0 5px 5px 5px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 45px;
+    height: 45px;
+  }
+  </style>
+  <script>
+  $(function() {
+    $( "#sortable1, #sortable2, #sortable3" ).sortable({
+      connectWith: ".connectedSortable"
+    }).disableSelection();
+
+    $( "#sortable2, #sortable3" ).on( "sortreceive", function(event, ui) {
+        if($(this).children().length > 4){
+          $(ui.sender).sortable('cancel');
+        }
+    });
+
+  });
+  </script>
+</head>
+<body>
+ 
+<ul id="sortable1" class="connectedSortable">
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+  <li class="ui-state-default"></li>
+</ul>
+ 
+<ul id="sortable2" class="connectedSortable">
+
+</ul>
+<ul id="sortable3" class="connectedSortable">
+
+</ul>
+ 
+ 
+</body>
+</html>

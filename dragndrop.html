@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
   <script src="js/dragndrop.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -12,28 +13,48 @@
 
 <div class="row" >
   <div class="container" >
-  	<div class="head" >a</div>
-  	<div class="body" >sdssdf</div>
+  	<div class="head">B</div>
+  	<ul class="body to connectedSortable" type="B">
+    </ul>
   </div>
   <div class="container" >
-  	<div class="head" >b</div>
-  	<div class="body" >sdssdf</div>
+  	<div class="head">P</div>
+  	<ul class="body to connectedSortable" type="P">
+    </ul>
   </div>
 </div>
 
-<div class="row" >
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-	<div class="picture"></div>
-</div>
+<ul class="row from connectedSortable" >
+  <li class="picture" type="P">
+    <img src="img/cabbage.jpg">
+    <a class="title hidden">Kopūstas</a>
+  </li>
+  <li class="picture hidden" type="B">
+    <img src="img/strawberry.jpg">
+    <a class="title hidden">Braškė</a>
+  </li>
+  <li class="picture hidden" type="B">
+    <img src="img/bun.jpg">
+    <a class="title hidden">Bandelė</a>
+  </li>
+  <li class="picture hidden" type="P">
+    <img src="img/penguin.jpg">
+    <a class="title hidden">Pingvinas</a>
+  </li>
+  <li class="picture hidden" type="B">
+    <img src="img/beaver.jpg">
+    <a class="title hidden">Bebras</a>
+  </li>
+  <li class="picture hidden" type="P">
+    <img src="img/parrot.jpg">
+    <a class="title hidden">Papūga</a>
+  </li>
+  <li class="picture hidden" type="B">
+    <img src="img/banana.jpg">
+    <a class="title hidden">Bananas</a>
+  </li>
+
+</ul>
 
 </body>
 </html>

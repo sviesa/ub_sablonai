@@ -1,29 +1,61 @@
 .dragndrop{
-  // font-size: 120%;
+  .hidden{
+    display: none;
+  }
+  font-size: 120%;
+  ul{
+    list-style-type: none;
+    &.from{
+      height: 5em;
+    }
+  }
   .row{
-    position: relative;
     .container{
       display: table-cell;
-      width: 20em;
+      // width: 18em;
         .head{
           text-align: center;
           background-color: #ffb31f;
           padding: 0.4em;
-          margin-right: 0.5em;
+          margin-right: 2em;
         }
         .body{
+          // border: 1px solid #eee;
+          // width: 142px;
+          min-height: 1em;
+          list-style-type: none;
+          // margin: 0;
+          // padding: 5px 0 0 0;
+          float: left;
+          width: 17.5em;
+          height: 17.5em;
           background-color: #e2e2e2;
           margin-top: 0.1em;
-          padding: 0.4em;
-          margin-right: 0.5em;
+          padding: 0 0 0.5em 0.5em;
+          margin-right: 2em;
         }
     }
 
     .picture{
-      float: bottom;
+      border: 0.2em solid #e2e2e2;
+      margin: 0.5em 0.5em 0 0;
+      cursor: pointer;
+      float: left;
       background: #a1d4ff;
-      width: 0.2em;
-      height: 0.2em;
+      width: 5em;
+      height: 5em;
+      position: relative;
+      img{
+        width: 100%;
+        height: 100%;
+        // height: auto;
+      }
+      .title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
     }
   }
 

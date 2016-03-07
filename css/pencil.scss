@@ -1,0 +1,75 @@
+.pencil{
+	margin: 0;
+	// background-color: #b4d2ee;
+	background-image: url('../img/pencil-bkg.jpg');
+	.background-waves{
+		position: absolute;
+		background-color: white;
+		height: 20em;
+		width: 35em;
+		z-index: -1;
+	}
+	div.buttons{
+		font-size: 80%;
+		padding: 0 0.5em;
+		width: 15em;
+		/*float: left;*/
+		display: table-cell;
+	}
+	div.text{
+		background-color: white;
+		border: 0.15em solid #73e6ff;
+		width: 20em;
+		/*float: left;*/
+		display: table-cell;
+		padding: 0.5em;
+		@include prefix(border-radius, 2%);
+	}
+	div.title{
+		text-align: center;
+		font-weight: bold;
+	}
+	div.textblock{cursor: url(../img/pencil.png), auto;}
+	.button-container{
+		padding: 0.3em;
+	}
+	.empty-container{
+		height: 5em;
+	}
+	.button{
+		margin-top: 0.3em;
+		text-align: center;
+		border: 0.1em solid rgba(0, 0, 0, 0.5);
+		cursor: pointer;
+		padding: 0.3em;
+		@include prefix(border-radius, 5%);
+		&.selected{
+			@include prefix(animation, blink 1s infinite);
+		}
+	}
+
+	.check, .cancel{
+		float: left;
+		background-color: whitesmoke;
+		border: 0.05em solid #9d9d9d;
+		cursor: pointer;
+		padding: 0.5em 1.2em;
+		margin: 0.6em;
+	}
+
+	#color1{ background-color: #7dadd5 }
+	#color2{ background-color: #83c86e }
+	#color3{ background-color: #fefc70 }
+	#color4{ background-color: #eea0c4 }
+	#color5{ background-color: #ffbf42 }
+	#color6{ background-color: #b5ab98 }
+	#color7{ background-color: #f43535 }
+}
+
+
+@include keyframes('blink') {
+  50% {
+  	border: 0.1em solid rgba(0, 0, 0, 0);
+  	opacity: 0.5;
+  }
+}

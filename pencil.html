@@ -5,19 +5,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <script src="js/jquery-1.10.2.js"></script>
-  <script src="js/script.js"></script>
+  <script src="js/pencil.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
-<body>
+<body class="pencil">
   <div>
     <div class="text">
       <div class="title">Baltijos jūra žiemą<br><br></div>
-      <div class="textblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jūratė ir Motiejus kartu su mama ir tėčiu vyksta į Lietuvos pajūrį. Jie nori pamatyti Baltijos jūrą žiemą.</div>
-      <div class="textblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Baltija žiemą nėra tokia draugiška ir rami, kaip vasarą! Kai oras atvėsta, jūros krantas pasidengia ledu ir sniegu, perspėja tėtis Jokubas.</div>
-      <div class="textblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- O aš noriu pamatyti jūroje laivą, iš kurio mojuoja kapitonas ir jūreiviai, - svajoja Motiejus.</div>
-      <div class="textblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Laivu galima nuplaukti iki Suomijos - Kalėdų senelio gimtinės... - mąsto Jūratė.</div>
-      <div class="textblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pagaliau automobilis ustojo. Jūratė, Motiejus, mama ir tėtis pamatė apledijusį jūros krantą. Jūros pakrantėje spindėjo didžiuliai ledo kalnai.</div>
-      <div class="textblock">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Jaučiuosi lyg pasakoje... - sušnibždėjo Jūratė.</div>
+      <div class="textblock">&nbsp;&nbsp;&nbsp;Jūratė ir Motiejus kartu su mama ir tėčiu vyksta į Lietuvos pajūrį. Jie nori pamatyti Baltijos jūrą žiemą.</div>
+      <div class="textblock">&nbsp;&nbsp;&nbsp;- Baltija žiemą nėra tokia draugiška ir rami, kaip vasarą! Kai oras atvėsta, jūros krantas pasidengia ledu ir sniegu, perspėja tėtis Jokubas.</div>
+      <div class="textblock">&nbsp;&nbsp;&nbsp;- O aš noriu pamatyti jūroje laivą, iš kurio mojuoja kapitonas ir jūreiviai, - svajoja Motiejus.</div>
+      <div class="textblock">&nbsp;&nbsp;&nbsp;- Laivu galima nuplaukti iki Suomijos - Kalėdų senelio gimtinės... - mąsto Jūratė.</div>
+      <div class="textblock">&nbsp;&nbsp;&nbsp;Pagaliau automobilis ustojo. Jūratė, Motiejus, mama ir tėtis pamatė apledijusį jūros krantą. Jūros pakrantėje spindėjo didžiuliai ledo kalnai.</div>
+      <div class="textblock">&nbsp;&nbsp;&nbsp;- Jaučiuosi lyg pasakoje... - sušnibždėjo Jūratė.</div>
       </div>
     <div class="buttons">
       <div class="button-container">
@@ -41,12 +41,14 @@
       <div class="button-container">
         <div class="button" id="color7" onclick="setColor('color7')">Kaip atrodė jūros krantas?</div>
       </div>
+      <div class="empty-container"></div>
+      <div>
+        <div class='check' onclick="check();">Tikrinti</div>
+        <div class='cancel' onclick="cancel();">Atšaukti</div>
+      </div>
     </div>
   </div>
-  <div>
-    <div class='check' onclick="check();">Tikrinti</div>
-    <div class='cancel' onclick="cancel();">Atšaukti</div>
-  </div>
+
 
 
 </body>

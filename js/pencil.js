@@ -48,9 +48,9 @@ function check(){
     // console.log( answers[id].replace(/ /g, '') );
     // console.log( selected_text.replace(/ /g, '') );
     if (answers[global_id].replace(/ /g, '') === $.trim(selected_text.replace(/ /g, '')) ){
-        alert('TAIP');
+        alert('Teisingai');
     }
-    else{ alert('NE');}
+    else{ alert('Neteisingai');}
 }
 function cancel(){
     $.each( $('span.selected'+global_id), function(index, value){

@@ -1,0 +1,30 @@
+.dragndrop{
+  // font-size: 120%;
+  .row{
+    position: relative;
+    .container{
+      display: table-cell;
+      width: 20em;
+        .head{
+          text-align: center;
+          background-color: #ffb31f;
+          padding: 0.4em;
+          margin-right: 0.5em;
+        }
+        .body{
+          background-color: #e2e2e2;
+          margin-top: 0.1em;
+          padding: 0.4em;
+          margin-right: 0.5em;
+        }
+    }
+
+    .picture{
+      float: bottom;
+      background: #a1d4ff;
+      width: 0.2em;
+      height: 0.2em;
+    }
+  }
+
+}

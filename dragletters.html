@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/dragletters.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="dragletters">
+
+<div class="equal-height">
+  <div>
+    <div class="equal-height float-left droppable" style="position: relative;" type="4">
+      <div style="position: absolute; top:3.3em; left: 0.5em; letter-spacing: 0.97em">ADAD</div>
+      <table border class="cells">
+        <td></td><td></td><td></td><td></td>
+      </table>
+    </div>
+    <div class="equal-height float-right droppable" type="7">
+      <table border class="cells">
+        <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+      </table>
+    </div>
+  </div>
+  <div >
+    <div class="equal-height float-left droppable"  style="position: relative;"  type="6">
+      <div style="position: absolute; top:3.3em; left: 0.5em; letter-spacing: 0.97em">ADADAD</div>
+      <table border class="cells">
+        <td></td><td></td><td></td><td></td><td></td><td></td>
+      </table>
+    </div>
+    <div class="equal-height float-right droppable"  style="position: relative;"  type="5">
+      <div style="position: absolute; top:3.3em; left: 0.5em; letter-spacing: 0.97em">ADADA</div>
+      <table border class="cells">
+        <td></td><td></td><td></td><td></td><td></td>
+      </table>
+    </div>
+  </div>
+  <div class="from">
+    <div class="draggable picture" id="1" type="4">
+      <img src="img/cabbage.jpg">
+    </div>
+    <div class="draggable picture hidden" id="2" type="6">
+      <img src="img/penguin.jpg">
+    </div>
+  </div>
+</div>
+<div  id="results">
+    <div class="draggable picture invisible" id="1" type="4">
+      <img src="img/cabbage.jpg">
+      <a class="title">Jūra</a>
+    </div>
+    <div class="draggable picture invisible" id="2" type="6">
+      <img src="img/penguin.jpg">
+      <a class="title">Žvejys</a>
+    </div>
+</div>
+
+</body>
+</html>

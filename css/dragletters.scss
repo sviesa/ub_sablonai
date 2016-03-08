@@ -1,0 +1,66 @@
+.dragletters{
+  font-size: 120%;
+	.hidden{
+	  display: none;
+	}
+	.from{
+		padding-left: 5em;
+	}
+	.droppable{
+		// border: 2px solid;
+		width: 15em;
+		height: 6em;
+	  .float-left{
+	    table{float: left}
+	  }
+	  .float-right{
+	    table{float: right}
+	  }
+	}
+
+  table.cells{
+    border-collapse: collapse;
+    margin: 3em 0;
+    td{
+    	background-color: #e2e2e2;
+      width: 1.5em;
+      height: 1.5em;
+    }
+  }
+  .equal-height{
+    display: table-cell;
+  }
+
+  .picture{
+  	width: 5em;
+  	height: 5em;
+  	margin-top: 0.5em;
+		img{
+			cursor: pointer;
+			height: 100%;
+			width: 100%;
+		}
+    .title{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: whitesmoke;
+    }
+  }
+  #results{
+  	width: 5em;
+  	background: blue;
+  	display: table-cell;
+  	div{
+  		@include prefix( transition, ( opacity 1s ease-out));
+	  	&.invisible{
+	  		// visibility: hidden;
+	  		opacity: 0;
+	  	}
+  	}
+
+  }
+
+}

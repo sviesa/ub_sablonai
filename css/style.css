@@ -20,11 +20,11 @@
     /*float: left;*/
     display: table-cell;
     padding: 0.5em;
-    -webkit-border-radius: 2%;
-    -moz-border-radius: 2%;
-    -ms-border-radius: 2%;
-    -o-border-radius: 2%;
-    border-radius: 2%; }
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+    border-radius: 1em; }
   .pencil div.title {
     text-align: center;
     font-weight: bold; }
@@ -40,11 +40,11 @@
     border: 0.1em solid rgba(0, 0, 0, 0.5);
     cursor: pointer;
     padding: 0.3em;
-    -webkit-border-radius: 5%;
-    -moz-border-radius: 5%;
-    -ms-border-radius: 5%;
-    -o-border-radius: 5%;
-    border-radius: 5%; }
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em; }
     .pencil .button.selected {
       -webkit-animation: blink 1s infinite;
       -moz-animation: blink 1s infinite;
@@ -133,7 +133,10 @@
     .dragndrop .row .picture .title {
       position: absolute;
       bottom: 0;
-      left: 0; }
+      left: 0;
+      width: 100%;
+      text-align: center;
+      background-color: whitesmoke; }
 
 body {
   font-size: 21pt;

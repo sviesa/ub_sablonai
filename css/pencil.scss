@@ -23,7 +23,7 @@
 		/*float: left;*/
 		display: table-cell;
 		padding: 0.5em;
-		@include prefix(border-radius, 2%);
+		@include prefix(border-radius, 1em);
 	}
 	div.title{
 		text-align: center;
@@ -42,7 +42,7 @@
 		border: 0.1em solid rgba(0, 0, 0, 0.5);
 		cursor: pointer;
 		padding: 0.3em;
-		@include prefix(border-radius, 5%);
+		@include prefix(border-radius, 0.5em);
 		&.selected{
 			@include prefix(animation, blink 1s infinite);
 		}

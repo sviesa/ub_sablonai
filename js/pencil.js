@@ -38,7 +38,16 @@ $(document).ready( function(){
     });
 
 })
-
+function generateSelectorForCorrectAnswer(arr){
+    var selector = '';
+    for ( var i = arr[1][0]; i <= arr[1][1]; i++ ) {
+        selector = selector
+            +' #'+arr[0].toString()+i.toString()+'word,'
+            +' #'+arr[0].toString()+i.toString()+'whitespace,';
+    }
+    // console.log( "4px dotted "+global_color );
+    return $(selector.slice(0,-1));
+}
 // function check(){
 //     var selected_text = '';
 //     $.each( $('span.selected'+global_id), function(index, value){
@@ -53,20 +62,20 @@ $(document).ready( function(){
 //     else{ alert('Neteisingai');}
 // }
 function check(){
-    var arr = answers[global_id];
-    var selector = '';
-    for ( var i = arr[1][0]; i <= arr[1][1]; i++ ) {
-        selector = selector
-            +' #'+arr[0].toString()+i.toString()+'word,'
-            +' #'+arr[0].toString()+i.toString()+'whitespace,';
-    }
-    console.log( "4px dotted "+global_color );
+    var selector = generateSelectorForCorrectAnswer( answers[global_id] );
     $(selector.slice(0,-1)).css("box-shadow", "0 7px 0 0"+global_color);
 }
+
 function cancel(){
     $.each( $('span.selected'+global_id), function(index, value){
         $( value ).removeClass().removeAttr('style');
     } );
+
+    var selector = generateSelectorForCorrectAnswer( answers[global_id] );
+    $.each( $(selector.slice(0,-1)), function(index, value){
+        $( value ).removeAttr('style');
+    } );
+
 }
 
 function setColor(id){
@@ -82,6 +91,7 @@ function setColor(id){
     // .append("<div class='check' onclick='check(\""+id+"\")'>Tikrinti</div>")
     // .append("<div class='cancel' onclick='cancel(\""+id+"\")'>Atšaukti</div>");
 }
+
 function hexc(colorval) {
     var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
     delete(parts[0]);

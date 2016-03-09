@@ -1,5 +1,6 @@
 .pencil{
 	margin: 0;
+	font-size: 160%;
 	// background-color: #b4d2ee;
 	background-image: url('../img/pencil-bkg.jpg');
 	.background-waves{
@@ -20,6 +21,7 @@
 		background-color: white;
 		border: 0.15em solid #73e6ff;
 		width: 20em;
+		line-height: 1.4em;
 		/*float: left;*/
 		display: table-cell;
 		padding: 0.5em;

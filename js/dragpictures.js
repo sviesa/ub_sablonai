@@ -20,6 +20,9 @@ $(function() {
       $(".from").children().first().animate({"opacity": "0", "left": "-3em"}, 0, function() {
         $(".from").children().first().animate({"opacity": "1", "left": "0"}, 500)
       });
+      if( $(".from").children().first().length === 0 ){
+        $( '#animated-message' ).animate({"opacity": "1", "size" : "200%"}, 1000);
+      }
     }
   });
 

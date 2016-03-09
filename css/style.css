@@ -1,5 +1,6 @@
 .pencil {
   margin: 0;
+  font-size: 160%;
   background-image: url("../img/pencil-bkg.jpg"); }
   .pencil .background-waves {
     position: absolute;
@@ -17,6 +18,7 @@
     background-color: white;
     border: 0.15em solid #73e6ff;
     width: 20em;
+    line-height: 1.4em;
     /*float: left;*/
     display: table-cell;
     padding: 0.5em;
@@ -95,6 +97,28 @@
 
 .dragpictures {
   font-size: 120%; }
+  .dragpictures #animated-message {
+    z-index: 1;
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    font-size: 300%;
+    color: orange;
+    background: white;
+    padding: 1em;
+    border: 1px solid whitesmoke;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 5px 5px 18px #b3b3b3;
+    -moz-box-shadow: 5px 5px 18px #b3b3b3;
+    -ms-box-shadow: 5px 5px 18px #b3b3b3;
+    -o-box-shadow: 5px 5px 18px #b3b3b3;
+    box-shadow: 5px 5px 18px #b3b3b3; }
+  .dragpictures .invisible {
+    opacity: 0; }
   .dragpictures .hidden {
     display: none; }
   .dragpictures ul {
@@ -139,18 +163,45 @@
       background-color: whitesmoke; }
 
 .dragletters {
-  font-size: 120%; }
+  font-size: 120%;
+  margin-left: 2em; }
+  .dragletters #animated-message {
+    z-index: 1;
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    font-size: 300%;
+    color: orange;
+    background: white;
+    padding: 1em;
+    border: 1px solid whitesmoke;
+    -webkit-border-radius: 0.5em;
+    -moz-border-radius: 0.5em;
+    -ms-border-radius: 0.5em;
+    -o-border-radius: 0.5em;
+    border-radius: 0.5em;
+    -webkit-box-shadow: 5px 5px 18px #b3b3b3;
+    -moz-box-shadow: 5px 5px 18px #b3b3b3;
+    -ms-box-shadow: 5px 5px 18px #b3b3b3;
+    -o-box-shadow: 5px 5px 18px #b3b3b3;
+    box-shadow: 5px 5px 18px #b3b3b3; }
   .dragletters .hidden {
     display: none; }
   .dragletters .from {
     padding-left: 5em; }
   .dragletters .droppable {
-    width: 15em;
+    position: relative;
+    width: 17em;
     height: 6em; }
     .dragletters .droppable .float-left table {
       float: left; }
     .dragletters .droppable .float-right table {
       float: right; }
+    .dragletters .droppable .answer {
+      position: absolute;
+      top: 3.3em;
+      left: 0.5em;
+      letter-spacing: 1em; }
   .dragletters table.cells {
     border-collapse: collapse;
     margin: 3em 0; }
@@ -162,12 +213,13 @@
     display: table-cell; }
   .dragletters .picture {
     width: 5em;
-    height: 5em;
-    margin-top: 0.5em; }
+    height: 6em;
+    margin-top: 0.5em;
+    position: relative; }
     .dragletters .picture img {
       cursor: pointer;
-      height: 100%;
-      width: 100%; }
+      width: 100%;
+      height: auto; }
     .dragletters .picture .title {
       position: absolute;
       bottom: 0;
@@ -175,18 +227,14 @@
       width: 100%;
       text-align: center;
       background-color: whitesmoke; }
+  .dragletters .invisible {
+    opacity: 0; }
   .dragletters #results {
-    width: 5em;
-    background: blue;
+    width: 15em;
     display: table-cell; }
-    .dragletters #results div {
-      -webkit-transition: opacity 1s ease-out;
-      -moz-transition: opacity 1s ease-out;
-      -ms-transition: opacity 1s ease-out;
-      -o-transition: opacity 1s ease-out;
-      transition: opacity 1s ease-out; }
-      .dragletters #results div.invisible {
-        opacity: 0; }
+    .dragletters #results .answer {
+      float: left;
+      margin-right: 1em; }
 
 body {
   font-size: 21pt;

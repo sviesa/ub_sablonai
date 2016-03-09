@@ -63,7 +63,7 @@ function generateSelectorForCorrectAnswer(arr){
 // }
 function check(){
     var selector = generateSelectorForCorrectAnswer( answers[global_id] );
-    $(selector.slice(0,-1)).css("box-shadow", "0 7px 0 0"+global_color);
+    $(selector.slice(0,-1)).css("box-shadow", "0 7px 0 0 "+darkenColor(global_color));
 }
 
 function cancel(){
@@ -79,8 +79,7 @@ function cancel(){
 }
 
 function setColor(id){
-    var color = hexc( $('#'+id).css('backgroundColor') );
-    global_color = color;
+    global_color = $('#'+id).css('backgroundColor');
     global_id = id;
 
     $('.button.selected')
@@ -92,12 +91,24 @@ function setColor(id){
     // .append("<div class='cancel' onclick='cancel(\""+id+"\")'>Atšaukti</div>");
 }
 
-function hexc(colorval) {
-    var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-    delete(parts[0]);
-    for (var i = 1; i <= 3; ++i) {
-        parts[i] = parseInt(parts[i]).toString(16);
-        if (parts[i].length == 1) parts[i] = '0' + parts[i];
-    }
-    return ('#' + parts.join(''));
+function darkenColor(color){
+    var arr = color.split(',');
+    var new_color = 'rgb('
+    $.each(arr, function(i, value){
+        var darkerValue = ( parseInt( value.replace (/[^0-9]/g, '') ) - 50);
+        if(darkerValue < 0){darkerValue = 0;}
+        new_color = new_color + darkerValue.toString() + ',';
+    })
+    new_color = new_color.slice(0,-1) + ')';
+    return new_color;
 }
+
+// function hexc(colorval) {
+//     var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
+//     delete(parts[0]);
+//     for (var i = 1; i <= 3; ++i) {
+//         parts[i] = parseInt(parts[i]).toString(16);
+//         if (parts[i].length == 1) parts[i] = '0' + parts[i];
+//     }
+//     return ('#' + parts.join(''));
+// }

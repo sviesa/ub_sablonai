@@ -1,5 +1,19 @@
 .dragletters{
   font-size: 120%;
+	margin-left: 2em;
+	#animated-message{
+		z-index: 1;
+		position: absolute;
+		top: 2em;
+		left: 3em;
+		font-size: 300%;
+		color: orange;
+		background: white;
+		padding: 1em;
+		border: 1px solid whitesmoke;
+		@include prefix(border-radius, 0.5em);
+		@include prefix(box-shadow, 5px 5px 18px #B3B3B3);
+	}
 	.hidden{
 	  display: none;
 	}
@@ -7,14 +21,21 @@
 		padding-left: 5em;
 	}
 	.droppable{
-		// border: 2px solid;
-		width: 15em;
+		position: relative;
+		width: 17em;
 		height: 6em;
 	  .float-left{
 	    table{float: left}
 	  }
 	  .float-right{
 	    table{float: right}
+	  }
+	  .answer{
+			position: absolute;
+			top:3.3em;
+			left: 0.5em;
+			letter-spacing: 1em;
+			// &.long{letter-spacing: 1.07em;}
 	  }
 	}
 
@@ -33,12 +54,13 @@
 
   .picture{
   	width: 5em;
-  	height: 5em;
+  	height: 6em;
   	margin-top: 0.5em;
+  	position: relative;
 		img{
 			cursor: pointer;
-			height: 100%;
 			width: 100%;
+			height: auto;
 		}
     .title{
       position: absolute;
@@ -49,18 +71,11 @@
       background-color: whitesmoke;
     }
   }
+  .invisible{opacity: 0;}
   #results{
-  	width: 5em;
-  	background: blue;
+  	width: 15em;
   	display: table-cell;
-  	div{
-  		@include prefix( transition, ( opacity 1s ease-out));
-	  	&.invisible{
-	  		// visibility: hidden;
-	  		opacity: 0;
-	  	}
-  	}
-
+  	.answer{float: left; margin-right: 1em;}
   }
 
 }

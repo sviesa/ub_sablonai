@@ -1,5 +1,19 @@
 .dragpictures{
   font-size: 120%;
+  #animated-message{
+    z-index: 1;
+    position: absolute;
+    top: 2em;
+    left: 3em;
+    font-size: 300%;
+    color: orange;
+    background: white;
+    padding: 1em;
+    border: 1px solid whitesmoke;
+    @include prefix(border-radius, 0.5em);
+    @include prefix(box-shadow, 5px 5px 18px #B3B3B3);
+  }
+  .invisible{opacity: 0;}
   .hidden{
     display: none;
   }

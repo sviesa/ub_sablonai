@@ -8,7 +8,7 @@ $(function() {
       // alert("kad ne");
       $(ui.sender).sortable('cancel');
       $(this).animate({"background-color": "red"}, 200, function() {
-        $(this).animate({"background-color": "#e2e2e2"})
+        $(this).animate({"background-color": "white"})
       });
     }
     else if($(this).children().length > 4){

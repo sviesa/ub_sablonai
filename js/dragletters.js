@@ -22,7 +22,7 @@ $(function() {
         $('.droppable[type="'+$(this).attr("type")+'"] > .answer').text(ui.draggable.attr("data-word"));
         $('.droppable[type="'+$(this).attr("type")+'"] > .answer').delay( 2000 ).fadeOut( 500 );
 
-        $( '#results #' + ui.draggable.attr("id")).animate({"opacity": "1"}, 500);
+        $( '.results #' + ui.draggable.attr("id")).animate({"opacity": "1"}, 500);
         $(".from").children().first().removeClass("hidden");
         $(".from").children().first().animate({"opacity": "0", "left": "-3em"}, 0, function() {
           $(".from").children().first().animate({"opacity": "1", "left": "0"}, 500);

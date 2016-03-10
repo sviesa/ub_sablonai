@@ -45,22 +45,9 @@ function generateSelectorForCorrectAnswer(arr){
             +' #'+arr[0].toString()+i.toString()+'word,'
             +' #'+arr[0].toString()+i.toString()+'whitespace,';
     }
-    // console.log( "4px dotted "+global_color );
     return $(selector.slice(0,-1));
 }
-// function check(){
-//     var selected_text = '';
-//     $.each( $('span.selected'+global_id), function(index, value){
-//         selected_text = selected_text + $(value).text();
-//     } );
 
-//     // console.log( answers[id].replace(/ /g, '') );
-//     // console.log( selected_text.replace(/ /g, '') );
-//     if (answers[global_id].replace(/ /g, '') === $.trim(selected_text.replace(/ /g, '')) ){
-//         alert('Teisingai');
-//     }
-//     else{ alert('Neteisingai');}
-// }
 function check(){
     var selector = generateSelectorForCorrectAnswer( answers[global_id] );
     $(selector.slice(0,-1)).css("box-shadow", "0 7px 0 0 "+darkenColor(global_color));
@@ -84,11 +71,7 @@ function setColor(id){
 
     $('.button.selected')
     .removeClass('selected')
-    // .children('.check, .cancel').remove()
-
     $('#'+id).addClass("selected")
-    // .append("<div class='check' onclick='check(\""+id+"\")'>Tikrinti</div>")
-    // .append("<div class='cancel' onclick='cancel(\""+id+"\")'>Atšaukti</div>");
 }
 
 function darkenColor(color){
@@ -102,13 +85,3 @@ function darkenColor(color){
     new_color = new_color.slice(0,-1) + ')';
     return new_color;
 }
-
-// function hexc(colorval) {
-//     var parts = colorval.match(/^rgb\((\d+),\s*(\d+),\s*(\d+)\)$/);
-//     delete(parts[0]);
-//     for (var i = 1; i <= 3; ++i) {
-//         parts[i] = parseInt(parts[i]).toString(16);
-//         if (parts[i].length == 1) parts[i] = '0' + parts[i];
-//     }
-//     return ('#' + parts.join(''));
-// }

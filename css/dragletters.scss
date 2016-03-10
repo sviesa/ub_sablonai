@@ -1,9 +1,12 @@
 .dragletters{
+	background-image: url('../img/pencil-bkg.jpg');
+	background-size: 50em 50em;
+	// div{border: 1px solid;}
 	margin: 0;
-	border: 0.5em solid #e2e2e2;
+	// border: 0.5em solid #e2e2e2;
 	padding: 1em;
-  	font-size: 120%;
-  	width: 50em;
+  	font-size: 105%;
+  	// width: 50em;
 	#animated-message{
 		z-index: 1;
 		position: absolute;
@@ -21,12 +24,12 @@
 	  display: none;
 	}
 	.from{
-		padding-left: 5em;
+		padding: 5em 0 0 5em;
+		.picture{  	width: 7em; height: 7em;}
 	}
 	.droppable{
 		position: relative;
-		width: 17em;
-		height: 6em;
+		width: 12em;
 	  .float-left{
 	    table{float: left}
 	  }
@@ -43,10 +46,10 @@
 	}
 
   table.cells{
+  	float: left;
     border-collapse: collapse;
     margin: 3em 0;
     td{
-	  background-color: #e2e2e2;
       width: 1.5em;
       height: 1.5em;
       &.redborder-right{border-right: 0.25em solid red;}
@@ -59,17 +62,20 @@
   .equal-height{
     display: table-cell;
   }
-
+  .results{
+  	padding: 0.3em;
+  	div{ float: left;}
+  }
   .picture{
   	width: 5em;
   	height: 6em;
-  	margin-top: 0.5em;
+  	margin: 0.5em 1em 0 0;
   	position: relative;
-		img{
-			cursor: pointer;
-			width: 100%;
-			height: auto;
-		}
+	img{
+		cursor: pointer;
+		width: 100%;
+		height: auto;
+	}
     .title{
       position: absolute;
       bottom: 0;
@@ -80,10 +86,5 @@
     }
   }
   .invisible{opacity: 0;}
-  #results{
-  	width: 15em;
-  	display: table-cell;
-  	.answer{float: left; margin-right: 1em;}
-  }
 
 }

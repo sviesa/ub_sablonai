@@ -4,10 +4,10 @@ var answers = {
     "color1" : [0, [0,7]],
     "color2" : [0, [12, 16]],
     "color3" : [0, [17,17]],
-    "color4" : [1, [13,18]],
-    "color5" : [2, [4,12]],
+    "color4" : [1, [12,17]],
+    "color5" : [2, [3,11]],
     "color6" : [3, [1,9]],
-    "color7" : [4, [9,17]]
+    "color7" : [4, [8,17]]
     }
 var leftButtonDown = false;
 $(document).mousedown(function(e){

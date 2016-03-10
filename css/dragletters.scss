@@ -1,6 +1,9 @@
 .dragletters{
-  font-size: 120%;
-	margin-left: 2em;
+	margin: 0;
+	border: 0.5em solid #e2e2e2;
+	padding: 1em;
+  	font-size: 120%;
+  	width: 50em;
 	#animated-message{
 		z-index: 1;
 		position: absolute;
@@ -34,7 +37,7 @@
 			position: absolute;
 			top:3.3em;
 			left: 0.5em;
-			letter-spacing: 1em;
+			letter-spacing: 1.05em;
 			// &.long{letter-spacing: 1.07em;}
 	  }
 	}
@@ -43,10 +46,15 @@
     border-collapse: collapse;
     margin: 3em 0;
     td{
-    	background-color: #e2e2e2;
+	  background-color: #e2e2e2;
       width: 1.5em;
       height: 1.5em;
+      &.redborder-right{border-right: 0.25em solid red;}
     }
+    &.cells[type="4"] td{background: #98d585}
+    &.cells[type="7"] td{background: #eae375}
+    &.cells[type="6"] td{background: #9fc4f5}
+    &.cells[type="5"] td{background: #f59fc0}
   }
   .equal-height{
     display: table-cell;

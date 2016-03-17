@@ -285,6 +285,8 @@ img {
   font-size: 160%;
   /***************** animation ******************/
   /**********************************************/ }
+  .dragletters .wrapper {
+    position: relative; }
   .dragletters #animated-message {
     z-index: 1;
     position: absolute;
@@ -376,8 +378,7 @@ img {
     height: 600px;
     position: absolute;
     width: 50em;
-    top: 10em;
-    left: 12em;
+    top: 7em;
     background: none;
     z-index: 2; }
   .dragletters #animation-container {

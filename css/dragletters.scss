@@ -1,12 +1,11 @@
 .dragletters{
-	background-image: url('../img/pencil-bkg.jpg');
+	// font-family: 'Roboto Medium';
+	// background-image: url('../img/pencil-bkg.jpg');
 	background-size: 50em 50em;
 	// div{border: 1px solid;}
 	margin: 0;
-	// border: 0.5em solid #e2e2e2;
 	padding: 1em;
-  	font-size: 105%;
-  	// width: 50em;
+	font-size: 160%;
 	#animated-message{
 		z-index: 1;
 		position: absolute;
@@ -20,71 +19,81 @@
 		@include prefix(border-radius, 0.5em);
 		@include prefix(box-shadow, 5px 5px 18px #B3B3B3);
 	}
-	.hidden{
-	  display: none;
-	}
+  .float-left{float: left}
+  .float-right{float: right}
+	.hidden{display: none;}
 	.from{
-		padding: 5em 0 0 5em;
-		.picture{  	width: 7em; height: 7em;}
+		// padding: 5em 0 0 5em;
+		position: relative;
+		width: 12em;
+		height: 20em;
+		.picture{
+			z-index: 1;
+			width: 10em;
+			height: 10em;
+			position: absolute;
+			// float: bottom;
+			margin: 9em 0 1em 1em;
+		}
 	}
 	.droppable{
 		position: relative;
-		width: 12em;
-	  .float-left{
-	    table{float: left}
-	  }
-	  .float-right{
-	    table{float: right}
-	  }
+		min-width: 16em;
 	  .answer{
 			position: absolute;
-			top:3.3em;
-			left: 0.5em;
-			letter-spacing: 1.05em;
+			top:7.8em;
+			left: 1.9em;
+			letter-spacing: 1.5em;
 			// &.long{letter-spacing: 1.07em;}
 	  }
 	}
 
   table.cells{
-  	float: left;
     border-collapse: collapse;
-    margin: 3em 0;
+    margin: 1em;
     td{
-      width: 1.5em;
-      height: 1.5em;
-      &.redborder-right{border-right: 0.25em solid red;}
+      width: 2.2em;
+      height: 2.5em;
+     	padding:0.3em 0.1em;
+      div{height: 100%;}
+      &.blackborder-right{border-right: 0.12em solid black;}
     }
-    &.cells[type="4"] td{background: #98d585}
-    &.cells[type="7"] td{background: #eae375}
-    &.cells[type="6"] td{background: #9fc4f5}
-    &.cells[type="5"] td{background: #f59fc0}
+    &.cells[type="5"] td > div{background: #ffb0d3}
+    &.cells[type="6"] td > div{background: #98f1ff}
+    &.cells[type="4"] td > div{background: #a9febd}
+    &.cells[type="7"] td > div{background: #fdff92}
   }
-  .equal-height{
-    display: table-cell;
-  }
+
   .results{
   	padding: 0.3em;
-  	div{ float: left;}
   }
   .picture{
-  	width: 5em;
-  	height: 6em;
-  	margin: 0.5em 1em 0 0;
+  	width: 4em;
+  	height: 5em;
+  	margin: 0.5em 2em 0 0;
   	position: relative;
-	img{
-		cursor: pointer;
-		width: 100%;
-		height: auto;
-	}
+		img{
+			cursor: pointer;
+			width: 100%;
+			height: auto;
+		}
     .title{
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
       text-align: center;
-      background-color: whitesmoke;
+      background-color: white;
+      letter-spacing: 0.1em;
+      font-size: 80%;
+      text-transform: uppercase;
     }
   }
   .invisible{opacity: 0;}
 
+
+/**************** animation *********************/
+
+
+/***********************************************/
 }

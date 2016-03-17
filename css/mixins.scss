@@ -1,3 +1,19 @@
+@mixin prefix($property, $value) {
+  $vendors: webkit moz ms o;
+  @each $vendor in $vendors {
+    #{"-" + $vendor + "-" + $property}: #{$value};
+  }
+  #{$property}: #{$value};
+}
+
+@mixin prefixvalue($property, $value) {
+  $vendors: webkit moz ms o;
+  @each $vendor in $vendors {
+    #{$property}: #{"-" + $vendor + "-" + $value};
+  }
+  #{$property}: #{$value};
+}
+
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     $browser: '-webkit-'; @content;
@@ -13,12 +29,12 @@
   }
 } $browser: null;
 
+@mixin border-box {
+  @include prefix(box-sizing, border-box);
+}
 
-@mixin prefix($property, $value) {
-  $vendors: webkit moz ms o;
-  @each $vendor in $vendors {
-    #{"-" + $vendor + "-" + $property}: #{$value};
-  }
-
-  #{$property}: #{$value};
+@mixin centerer($direction, $size) {
+  position: absolute;
+  #{$direction}: 50%;
+  margin-#{$direction}: -($size/2);
 }

@@ -11,130 +11,136 @@
 </head>
 <body class="dragletters">
 
-<div id="animated-message" class="invisible">Puikiai atlikai užduotį</div>
+<!-- <div id="animated-message" class="invisible">Puikiai atlikai užduotį</div> -->
 
-<div>
-  <div>
-    <div class="equal-height droppable" type="4">
-      <div class="answer"></div>
-      <table border class="cells" type="4">
-        <td></td>
-        <td class="redborder-right"></td>
-        <td></td>
-        <td></td>
-      </table>
-    </div>
-    <div class="equal-height results">
-      <div class="picture invisible"  id="1" type="4" data-word="JŪRA">
-        <img src="img/sea.jpg">
-        <a class="title">Jūra</a>
+<div class="wrapper">
+  <div class="row">
+    <div class="droppable float-left" type="5">
+      <div class="row results">
+        <div class=" picture float-left invisible" id="3" type="5" data-word="ŽUVIS">
+          <img src="img/zuvis.png">
+          <a class="title">Žuvis</a>
+        </div>
+        <div class=" picture float-left invisible" id="7" type="5" data-word="ZYLĖS">
+          <img src="img/zyles.png">
+          <a class="title">Zylės</a>
+        </div>
       </div>
-      <div class="picture invisible" id="5" type="4" data-word="ŽOLĖ">
-        <img src="img/grass.jpg">
-        <a class="title">Žolė</a>
-      </div>
-      <div class="picture invisible" id="6" type="4" data-word="ROŽĖ">
-        <img src="img/rose.jpg">
-        <a class="title">Rožė</a>
-      </div>
-    </div>
-  </div>
-  <div>
-    <div class="equal-height droppable" type="7">
-      <div class="answer long"></div>
-      <table border class="cells" type="7">
-        <td></td>
-        <td class="redborder-right"></td>
-        <td></td>
-        <td class="redborder-right"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </table>
-    </div>
-    <div class="equal-height results">
-      <div class=" picture invisible" id="4" type="7" data-word="ARBŪZAS" >
-        <img src="img/watermelon.jpg">
-        <a class="title">Arbūzas</a>
-      </div>
-      <div class=" picture invisible" id="8" type="7" data-word="VAZONAS" >
-        <img src="img/flowerpot.jpg">
-        <a class="title">Vazonas</a>
+      <div class="row">
+        <div class="answer"></div>
+        <table class="cells" type="5">
+          <td><div></div></td>
+          <td class="blackborder-right"><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </table>
       </div>
     </div>
-  </div>
-  <div>
-    <div class="equal-height droppable" type="6">
-      <div class="answer"></div>
-      <table border class="cells" type="6">
-        <td></td>
-        <td></td>
-        <td class="redborder-right"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </table>
-    </div>
-    <div class="equal-height results">
-      <div class=" picture invisible" id="2" type="6" data-word="ŽVEJYS" >
-        <img src="img/fisherman.jpg">
-        <a class="title">Žvejys</a>
+    <div class="float-left from">
+      <div class="draggable picture" id="1" type="4" data-word="JŪRA">
+        <img src="img/jura.png">
       </div>
-      <div class=" picture invisible" id="9" type="6" data-word="ZEBRAS" >
-        <img src="img/zebra.jpg">
-        <a class="title">Zebras</a>
+      <div class="draggable picture hidden" id="2" type="6" data-word="ŽVEJYS">
+        <img src="img/zvejys.png">
+      </div>
+      <div class="draggable picture hidden" id="3" type="5" data-word="ŽUVIS">
+        <img src="img/zuvis.png">
+      </div>
+      <div class="draggable picture hidden" id="4" type="7" data-word="ARBŪZAS">
+        <img src="img/arbuzas.png">
+      </div>
+      <div class="draggable picture hidden" id="5" type="4" data-word="ŽOLĖ">
+        <img src="img/zole.png">
+      </div>
+      <div class="draggable picture hidden" id="6" type="4" data-word="ROŽĖ">
+        <img src="img/roze.png">
+      </div>
+      <div class="draggable picture hidden" id="7" type="5" data-word="ZYLĖS">
+        <img src="img/zyles.png">
+      </div>
+      <div class="draggable picture hidden" id="8" type="7" data-word="VAZONAS">
+        <img src="img/vazonas.png">
+      </div>
+      <div class="draggable picture hidden" id="9" type="6" data-word="ZEBRAS">
+        <img src="img/zebras.png">
       </div>
     </div>
-  </div>
-  <div>
-    <div class="droppable equal-height" type="5">
-      <div class="answer"></div>
-      <table border class="cells" type="5">
-        <td></td>
-        <td class="redborder-right"></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </table>
-    </div>
-    <div class="equal-height results">
-      <div class=" picture invisible" id="3" type="5" data-word="ŽUVIS" style="float: left;">
-        <img src="img/fish.jpg">
-        <a class="title">Žuvis</a>
-      </div>
-      <div class=" picture invisible" id="7" type="5" data-word="ZYLĖS" style="float: left;">
-        <img src="img/marshtits.jpg">
-        <a class="title">Zylės</a>
+    <div class="float-right">
+      <div class="droppable float-left" type="6">
+        <div class="row results">
+          <div class=" picture float-right invisible" id="2" type="6" data-word="ŽVEJYS" >
+            <img src="img/zvejys.png">
+            <a class="title">Žvejys</a>
+          </div>
+          <div class=" picture float-right invisible" id="9" type="6" data-word="ZEBRAS" >
+            <img src="img/zebras.png">
+            <a class="title">Zebras</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="answer"></div>
+          <table class="cells" type="6">
+            <td><div></div></td>
+            <td><div></div></td>
+            <td class="blackborder-right"><div></div></td>
+            <td><div></div></td>
+            <td><div></div></td>
+            <td><div></div></td>
+          </table>
+        </div>
       </div>
     </div>
   </div>
-  <div class="from">
-    <div class="draggable picture" id="1" type="4" data-word="JŪRA">
-      <img src="img/sea.jpg">
+  <div class="row">
+    <div class="droppable float-left" type="4">
+      <div class="row results">
+        <div class="picture float-left invisible"  id="1" type="4" data-word="JŪRA">
+          <img src="img/jura.png">
+          <a class="title">Jūra</a>
+        </div>
+        <div class="picture float-left invisible" id="5" type="4" data-word="ŽOLĖ">
+          <img src="img/zole.png">
+          <a class="title">Žolė</a>
+        </div>
+        <div class="picture float-left invisible" id="6" type="4" data-word="ROŽĖ">
+          <img src="img/roze.png">
+          <a class="title">Rožė</a>
+        </div>
+      </div>
+      <div class="row">
+          <div class="answer"></div>
+          <table class="cells" type="4">
+            <td><div></div></td>
+            <td class="blackborder-right"><div></div></td>
+            <td><div></div></td>
+            <td><div></div></td>
+          </table>
+      </div>
     </div>
-    <div class="draggable picture hidden" id="2" type="6" data-word="ŽVEJYS">
-      <img src="img/fisherman.jpg">
-    </div>
-    <div class="draggable picture hidden" id="3" type="5" data-word="ŽUVIS">
-      <img src="img/fish.jpg">
-    </div>
-    <div class="draggable picture hidden" id="4" type="7" data-word="ARBŪZAS">
-      <img src="img/watermelon.jpg">
-    </div>
-    <div class="draggable picture hidden" id="5" type="4" data-word="ŽOLĖ">
-      <img src="img/grass.jpg">
-    </div>
-    <div class="draggable picture hidden" id="6" type="4" data-word="ROŽĖ">
-      <img src="img/rose.jpg">
-    </div>
-    <div class="draggable picture hidden" id="7" type="5" data-word="ZYLĖS">
-      <img src="img/marshtits.jpg">
-    </div>
-    <div class="draggable picture hidden" id="8" type="7" data-word="VAZONAS">
-      <img src="img/flowerpot.jpg">
-    </div>
-    <div class="draggable picture hidden" id="9" type="6" data-word="ZEBRAS">
-      <img src="img/zebra.jpg">
+    <div class="droppable float-right" type="7">
+      <div class="row results">
+        <div class=" picture float-right invisible" id="4" type="7" data-word="ARBŪZAS" >
+          <img src="img/arbuzas.png">
+          <a class="title">Arbūzas</a>
+        </div>
+        <div class=" picture float-right invisible" id="8" type="7" data-word="VAZONAS" >
+          <img src="img/vazonas.png">
+          <a class="title">Vazonas</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="answer"></div>
+        <table class="cells" type="7">
+          <td><div></div></td>
+          <td class="blackborder-right"><div></div></td>
+          <td><div></div></td>
+          <td class="blackborder-right"><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+          <td><div></div></td>
+        </table>
+      </div>
     </div>
   </div>
 </div>

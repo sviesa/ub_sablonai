@@ -43,16 +43,16 @@ function animate() {
     
     var cW = container.offsetWidth;
     var cH = container.offsetHeight;
-    var gravity = 2.55;
-    var lifespan1 = 110;
-    var lifespan2 = 150;
+    var gravity = 2;
+    var lifespan1 = 80;
+    var lifespan2 = 130;
     var ground = .3 * cH;
     var startX;
-    var r = 60;
+    var r =90;
     var speedX;
     var speedYDown = 3;
     var speedYUp = 15;
-    var fontSize = 32;    
+    var fontSize = 32;
     if (cW > 500) {
         startX = 0.25 * cW;
         speedX = 0.005 * cW;
@@ -154,7 +154,7 @@ function animate() {
                     }
                 }  else {clearInterval(thisObj.timeIntv);}                
                 
-            }, 50);
+            }, 20);
         }
     }
     

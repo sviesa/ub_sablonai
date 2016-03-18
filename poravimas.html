@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/dragpictures.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="dragpictures">
+  <!-- <div id="animated-message" class="invisible">Puikiai atlikai užduotį</div> -->
+  <div class="wrapper">
+    <div class="row fonas" >
+      <div class="container" >
+      	<ul class="body to connectedSortable" type="B"></ul>
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+      </div>
+      <div class="container" >
+      	<ul class="body to connectedSortable" type="P"></ul>
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+        <div class="circle four"></div>
+      </div>
+    </div>
+
+    <ul class="row from connectedSortable" >
+      <li class="picture" type="P">
+        <img src="img/kopustas.png">
+        <a class="title hidden">Kopūstas</a>
+      </li>
+      <li class="picture hidden" type="B">
+        <img src="img/braske.png">
+        <a class="title hidden">Braškė</a>
+      </li>
+      <li class="picture hidden" type="B">
+        <img src="img/bandele.png">
+        <a class="title hidden">Bandelė</a>
+      </li>
+      <li class="picture hidden" type="P">
+        <img src="img/pingvinas.png">
+        <a class="title hidden">Pingvinas</a>
+      </li>
+      <li class="picture hidden" type="B">
+        <img src="img/bebras.png">
+        <a class="title hidden">Bebras</a>
+      </li>
+      <li class="picture hidden" type="P">
+        <img src="img/papuga.png">
+        <a class="title hidden">Papūga</a>
+      </li>
+      <li class="picture hidden" type="B">
+        <img src="img/bananas.png">
+        <a class="title hidden">Bananas</a>
+      </li>
+    </ul>
+
+    <div id="animation" class="hidden"><div id="animation-container"></div></div>
+  </div>
+</body>
+</html>

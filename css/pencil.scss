@@ -1,8 +1,9 @@
 .pencil{
-	margin: 0;
+	margin: 1em 0;
 	font-size: 160%;
 	// background-color: #b4d2ee;
 	background-image: url('../img/pencil-bkg.jpg');
+	.wrapper{width: 35em}
 	.background-waves{
 		position: absolute;
 		background-color: white;
@@ -13,7 +14,7 @@
 	div.buttons{
 		font-size: 80%;
 		padding: 0 0.5em;
-		width: 15em;
+		width: 19em;
 		/*float: left;*/
 		display: table-cell;
 	}
@@ -36,36 +37,42 @@
 		padding: 0.3em;
 	}
 	.empty-container{
-		height: 6em;
+		height: 1em;
 	}
 	.button{
-		margin-top: 0.3em;
+		margin-top: 0;
 		text-align: center;
-		border: 0.1em solid rgba(0, 0, 0, 0.5);
+		border: 0.1em solid rgba(0, 0, 0, 0.15);
 		cursor: pointer;
-		padding: 0.3em;
+		padding: 0.6em;
 		@include prefix(border-radius, 0.5em);
 		&.selected{
 			@include prefix(animation, blink 1s infinite);
 		}
 	}
 
-	.check, .cancel{
+	.circle-button{
+		text-transform: uppercase;
+		width: 6.5em;
+		height: 6.5em;
+		@include prefix(border-radius, 50%);
 		float: left;
-		background-color: whitesmoke;
-		border: 0.05em solid #9d9d9d;
 		cursor: pointer;
-		padding: 0.5em 1.2em;
+		padding: 2.6em 0.9em;
 		margin: 0.6em;
+		&.check{background-color: #5cff87;}
+		&.cancel{background-color: #d1e1f2;}
+		// @include prefix(box-shadow, 0 5px 27px black inset);
+		@include prefix(box-shadow, 5px 5px 1px rgba(0, 0, 0, 0.35));
 	}
 
-	#color1{ background-color: #7dadd5 }
-	#color2{ background-color: #83c86e }
-	#color3{ background-color: #fefc70 }
-	#color4{ background-color: #eea0c4 }
-	#color5{ background-color: #ffbf42 }
-	#color6{ background-color: #b5ab98 }
-	#color7{ background-color: #f43535 }
+	#color1{ background-color: #fefe9a }
+	#color2{ background-color: #b9fea9 }
+	#color3{ background-color: #9deeff }
+	#color4{ background-color: #afbffd }
+	#color5{ background-color: #ebb6fc }
+	#color6{ background-color: #ffc571 }
+	#color7{ background-color: #e4e4e4 }
 }
 
 
